@@ -15,6 +15,7 @@ namespace Proiect_NETMaui.Data
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Restaurant>().Wait();
+            _database.CreateTableAsync<Rezervare>().Wait();
         }
         public Task<List<Restaurant>> GetRestaurantAsync()
         {

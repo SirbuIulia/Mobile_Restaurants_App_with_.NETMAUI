@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proiect_NETMaui.RezervarePage"
+             Title="Book a Table">
+    <StackLayout>
+        <Label Text="Select Date:" />
+        <DatePicker x:Name="datePicker" />
+
+        <Label Text="Select Time:" />
+        <TimePicker x:Name="timePicker" />
+
+        <Label Text="Number of Persons:" />
+        <Entry x:Name="numarPersoaneEntry"
+               Placeholder="Enter the number of persons"
+               Keyboard="Numeric" />
+
+        <Button Text="Complete Reservation"
+                Clicked="OnCompleteReservationClicked" />
+    </StackLayout>
+
+</ContentPage>

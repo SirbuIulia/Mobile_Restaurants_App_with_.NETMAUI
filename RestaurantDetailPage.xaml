@@ -36,6 +36,9 @@
                 <Button Text="Show on Map" Grid.Column="1"
                     MaximumWidthRequest="200"
                     Clicked="OnShowMapButtonClicked"></Button>
+                <Button Text="Book a Table" Grid.Column="1"
+                MaximumWidthRequest="200"
+                Clicked="OnBookaTableButtonClicked"></Button>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

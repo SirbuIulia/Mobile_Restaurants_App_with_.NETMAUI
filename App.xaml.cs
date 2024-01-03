@@ -1,6 +1,7 @@
 ﻿using System;
 using Proiect_NETMaui.Data;
 using System.IO;
+using Xamarin.Essentials;
 namespace Proiect_NETMaui;
 
 public partial class App : Application
@@ -23,7 +24,7 @@ public partial class App : Application
     public App()
 	{
 		InitializeComponent();
-
-		MainPage = new AppShell();
+        
+        MainPage = new AppShell();
 	}
 }
