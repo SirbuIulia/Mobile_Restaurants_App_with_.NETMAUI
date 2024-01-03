@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proiect_NETMaui.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="logo.jpg"
+                SemanticProperties.Description="our perfect logo"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="TastyHaven"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Discover, Order, Enjoy!"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Discover, Order, Enjoy!"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
