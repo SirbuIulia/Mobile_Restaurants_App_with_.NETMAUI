@@ -26,10 +26,11 @@ public partial class RezervarePage : ContentPage
                 NumarPersoane = numarPersoane
                 // Other attributes of the Reservation object can be set here
             };
-            ScheduleNotification("Reservation Confirmation", $"Your reservation for {numarPersoane} persons on {selectedDate.ToLocalTime()} is confirmed.");
+            ScheduleNotificationAsync("Reservation Confirmation", $"Your reservation for {numarPersoane} persons on {selectedDate.ToLocalTime()} is confirmed.");
 
             // Schedule reminder notification one day before the reservation
-            ScheduleNotification("Reservation Reminder", $"Don't forget your reservation for {numarPersoane} persons tomorrow at {selectedDate.ToLocalTime().AddDays(-1)}.");
+            DateTime reminderDate = selectedDate.AddDays(-1);
+            ScheduleNotificationAsync("Reservation Reminder", $"Don't forget your reservation for {numarPersoane} persons tomorrow at {reminderDate.ToLocalTime()}.");
 
 
             // Navigate back to the previous page or perform other actions
@@ -40,13 +41,13 @@ public partial class RezervarePage : ContentPage
             DisplayAlert("Error", "Please enter a valid number of persons.", "OK");
         }
     }
-    private void ScheduleNotification(string title, string message)
+    private async Task ScheduleNotificationAsync(string title, string message)
     {
         var notification = new NotificationRequest
         {
             Title = title,
             Description = message,
-            ReturningData = "Dummy data for returning"
+        
         };
 
         LocalNotificationCenter.Current.Show(notification);
